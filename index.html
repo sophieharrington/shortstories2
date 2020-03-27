@@ -67,7 +67,8 @@
         //3. Ambiguous
         var vignettes = [
             //Unambiguous
-            ["Joseph is the owner of a large chain of department stores located throughout the Midwest. Recently, Joseph learned about a local children's hospital that was about to declare bankruptcy. Because he believed it would boost the reputation of his company, Joseph donated several million dollars to the hospital.",
+            [
+                "Joseph is the owner of a large chain of department stores located throughout the Midwest. Recently, Joseph learned about a local children's hospital that was about to declare bankruptcy. Because he believed it would boost the reputation of his company, Joseph donated several million dollars to the hospital.",
  "Zoey is entering her college's essay competition, which awards a prize of $500 to one winner. Her close friend is also competing, but is struggling to know what to write. Because Zoey wants her friend to stop asking for help, she decides to help her with her essay. Zoey gave her friend some great ideas, so her friend wins the competition.",
  "Nora's neighbor volunteers part-time at a homeless shelter. The shelter is now accepting new volunteers. Nora thinks volunteering will impress her attractive neighbor and she signs up to work there. The shelter is grateful for having new volunteers and Nora takes good care of the homeless people there.",
  "Victoria works as a promoter of charitable events. Her organization handles plans and promotes major fundraising events to raise donations. Victoria believes she will earn a percentage of the fundraiser's earnings and she works hard for the next fundraiser. The event raises over $2 million for charity. ",
@@ -91,7 +92,8 @@
             ],
             
             //Intentional
-            ["Joseph is the owner of a large chain of department stores located throughout the Midwest. Recently, Joseph learned about a local children's hospital that was about to declare bankruptcy. Because he believed the children's hospital was making a real difference, Joseph donated several million dollars to the hospital.",
+            [
+                "Joseph is the owner of a large chain of department stores located throughout the Midwest. Recently, Joseph learned about a local children's hospital that was about to declare bankruptcy. Because he believed the children's hospital was making a real difference, Joseph donated several million dollars to the hospital.",
  "Zoey is entering her college's essay competition, which awards a prize of $500 to one winner. Her close friend is also competing, but is struggling to know what to write. Because Zoey wants to help her friend do well, she decides to help her with her essay. Zoey gave her friend some great ideas, so her friend wins the competition.",
  "Nora's neighbor volunteers part-time at a homeless shelter. The shelter is now accepting new volunteers. Nora thinks volunteering will benefit the local homeless people and she signs up to work there. The shelter is grateful for having new volunteers and Nora takes good care of the homeless people there. ",
  "Victoria works as a promoter of charitable events. Her organization handles plans and promotes major fundraising events to raise donations. Victoria believes she will not earn a percentage of the fundraiser's earnings and she works hard for the next fundraiser. The event raises over $2 million for charity. ",
@@ -114,7 +116,8 @@
  'Avery has a job interview. Beforehand, she grabs a snack. There is a long queue at the checkouts. The customer in front of Avery has a large cart of shopping but is counting out their total bill in loose change. Because Avery empathises with the customer, she gives the customer the $50. This means that that the stranger can feed their family this week. '
             ],
             //Ambiguous 
-            ["Joseph is the owner of a large chain of department stores located throughout the Midwest. Recently, Joseph learned about a local children's hospital that was about to declare bankruptcy. Several months later, after he reviewed the annual financial reports, Joseph donated several million dollars to the hospital. ",
+            [
+                "Joseph is the owner of a large chain of department stores located throughout the Midwest. Recently, Joseph learned about a local children's hospital that was about to declare bankruptcy. Several months later, after he reviewed the annual financial reports, Joseph donated several million dollars to the hospital. ",
  "Zoey is entering her college's essay competition, which awards a prize of $500 to one winner. Her close friend is also competing, but is struggling to know what to write. Zoey has a sandwich for lunch and afterwards she has eaten, she decides to help her. Zoey gave her friend some great ideas, so her friend wins the competition.",
  "Nora's neighbor volunteers part-time at a homeless shelter. The shelter is now accepting new volunteers. One day, Nora looks at the availability on her schedule and she signs up to work there. The shelter is grateful for having new volunteers and Nora takes good care of the homeless people there. ",
  'Victoria works as a promoter of charitable events. Her organization handles plans and promotes major fundraising events to raise donations. Victoria confirms the bookings for the venue and catering company for an event. She works hard at the next fundraiser. The event raises over $2 million for charity. ',
@@ -138,7 +141,8 @@
             ],
             
             //Comprehension questions
-            ['What kind of hospital did Alexander donate to? ',
+            [
+                'What kind of hospital did Alexander donate to? ',
  'What competition is Zoey entering?',
  'Where does Nora volunteer? ',
  'What job does Victoria have?  ',
@@ -186,7 +190,8 @@
             ],
             
             //Correct answer
-            ["Children's hospital",
+            [
+                "Children's hospital",
  'Essay writing ',
  'Homeless shelter',
  'Charity events promoter ',
@@ -210,7 +215,8 @@
             ],
             
             //Other option 1
-            ['Animal hospital ',
+            [
+                'Animal hospital ',
  'Marathon ',
  'Food bank ',
  'Nightclub promoter ',
@@ -234,7 +240,8 @@
              ],
             
             //Other option 2 
-            ['Psychiatric hospital ',
+            [
+                'Psychiatric hospital ',
  'Spelling bee',
  'Local school ',
  'Wedding planner ',
@@ -287,7 +294,7 @@
         //Create a 'timeline' -  a list of all the trials
         var timeline = [];
         
-        Function to check whether consent has been given
+        //Function to check whether consent has been given
         var check_consent = function(elem) {
              if (document.getElementById('consent_checkbox').checked) {
                  return true;
@@ -299,7 +306,7 @@
             return false; 
         };
         
-        Presents external consent page to participants
+        //Presents external consent page to participants
          var consent = {
             type:'external-html',
             url: "consent.html",
@@ -381,8 +388,8 @@
             
             var upsetting ={
                 type: 'html-slider-response',
-                stimulus: "<div class = 'instructions'><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style='font-size:20px;'><i>" + vignettes_rand[order[k]][k] + "</i></p><br><br></div><p><b>How personally upsetting did you find this story?</b></p>",
-                labels: ["1</p>Not at all upsetting", "2</p>", "3</p>", "4</p>Somewhat upsetting", "5</p>", "6</p>", "7</p>Very upsetting"],
+                stimulus: "<div class = 'instructions'><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style='font-size:20px;'><i>" + vignettes_rand[order[k]][k] + "</i></p><br><br></div><p><b>How personally uplifting did you find this story?</b></p>",
+                labels: ["1</p>Not at all uplifting", "2</p>", "3</p>", "4</p>Somewhat uplifting", "5</p>", "6</p>", "7</p>Very uplifting"],
                 require_movement: true,
                 slider_width: 800,
                 min: 1,
@@ -506,8 +513,7 @@
         };
         timeline.push(conclusion);
 
-        
-        
+             
         //Runs the trials in the 'timeline' list of trials
         jsPsych.init({
             timeline: timeline, 

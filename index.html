@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Short Praiseworthy Stories</title>
+        <title>Short Stories</title>
         
         <!-- FIREBASE -->
         <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -54,11 +54,11 @@
         //Initialize vignettes and the condition order
         
         //Condition presentation order
-        var order = [0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2];
+        var order = [0,0,0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,2,2,2,2];
         var order = jsPsych.randomization.shuffle(order);
         
         //Vignette presentation order
-        var vignette_order = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+        var vignette_order = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
         var vignette_order = jsPsych.randomization.shuffle(vignette_order);
         
         //Vignettes
@@ -67,130 +67,115 @@
         //3. Ambiguous
         var vignettes = [
             //Unambiguous
-            ["Joseph is the owner of a large chain of department stores located throughout the Midwest. Recently, Joseph learned about a local children's hospital that was about to declare bankruptcy. Because he believed it would boost the reputation of their company, Joseph donated several million dollars to the hospital.",
- "Zoey is entering her college's essay competition, which is offering a prize of $500 to the winner. Her close friend is also competing, but is struggling to know what to write. Zoey wants her friend to stop constantly asking for help, so she decides to help her. Because Zoey gave her friend some great ideas, her friend wins the competition.",
- 'Nora recently learns her neighbor works part-time at a homeless shelter. The shelter is now accepting new volunteers. Nora thinks volunteering will impress her attractive neighbor, so she signs up to work there. The shelter is grateful for having new volunteers and Nora has a good rapport with the homeless people there. ',
- "Liam lives near a co-operative food store, which relies solely on volunteers to operate. Liam has found out that this cooperative store is understaffed and losing money. Liam just wants the employee discount, so he starts working there on weekends. After Liam starts, the cooperative is no longer understaffed and customers comment on the store's improvements. ",
- "Victoria works as a promoter of charitable events. Her organization handles the planning, promotion, and execution for major fundraising events to raise donations. Victoria believes she will take a percentage of the fundraiser's earnings. She hopes to maximise the money raised at the fundraiser. At Victoria's fundraiser, over $2 million is raised.",
- "Owen's friend has been in a car accident and has lost a considerable amount of blood. The friend has a rare blood type A-B negative which is in low supply at blood banks nearby. Owen's blood type is a perfect match. Owen knows he could get paid to donate blood, so he donates his blood to the local blood bank. Through Owen's donation, his friend can have a blood transfusion.",
- "On summer break, Luna she spends several days in Haiti with a volunteering organization. She builds shelters for impoverished families in an isolated village. She wants to show what a great photographer she is, so she decides to Instagram about the experience. Luna's Instagram post gets attention from her social group and the organization gets many more volunteers the next summer.",
- 'John is working at a small camping music festival. When the attendees are packing up to leave, a majority have left their tents behind. John knows it is his job to clear the campsite, so he spends the rest of the day picking up litter at the festival. It is the first year there is no debris left on the festival site and the wildlife is largely undisturbed.',
- "Chloe is in the queue, paying to park her car at a parking lot. The stranger behind her does not have enough change for their ticket. When paying, Chloe does not notice the stranger behind them is out of change. Chloe takes her ticket and leaves her change behind. With Chloe's spare change, the stranger behind her is able to pay for their ticket.",
- 'Luke is buying their morning coffee before work at a cafe. The cashier thinks Luke and the stranger behind them are paying together, putting through both their orders as one payment. Luke thinks the prices of coffee has gone up. He pays for both orders and the stranger gets a free coffee. ',
- 'Penelope is working in the library. She is writing her senior thesis, which helps determine if she can graduate college. A student, who Penelope does not recognise, walks past and is trying to find their phone. Penelope is trying to waste time and procrastinate, so she offers to help the search. After 30 minutes of searching, Penelope finds the lost phone for them under a chair.',
- 'Natalie has done baking for years. She is always experimenting with new ingredients. Recently, she learns about a bake-sale day at the community center, in aid of the Brain Tumour Foundation. Because Natalie wants to try lots of new receipes, she donates many different cakes to the bake-sale. The bakesale earned over $200 for the Brain Tumour Foundation.',
- 'Jayden and his girlfriend have just moved in together and Jayden decides to buy a dog to mark the commitment. Firstly, Jayden visits the pet store. He thinks buying a rescue dog is cheaper than the pet store, so he decides to visit the animal shelter. Jayden adopts a Greyhound, which has been rescued from its abusive owner. ',
- 'Grayson does not have a long lunch break, so he goes to the takeaway noodle bar. When the server brings the bill, it totals to $7. Grayson checks his wallet and only has a $50 bill. He thinks the server is going to give him change, so he gives the $50 bill to the server. The server takes the change as a tip. He never get tips this high, and believes he has given Grayson great service.',
- "Levi checks into their hotel after a long flight. The hotel elevator is out of service, so will have to use the stairs to the tenth floor. At the staircase, another hotel guest is looks like they could easily fall as they struggle to carry their own suitcase up the stairs. Levi believes the other guest will keep them waiting too long, so he carries the stranger's suitcase up ten flights of stairs. The guest is thankful to avoid any injuries.",
- "Hannah is out for coffee with an old school friend. Hannah's friend tells her about a charity half-marathon that she has been training for. Hannah believes this marathon would greatly improve her physical fitness. Later that year, Hannah's runs the Boston Marathon and raises over $400 for charity.",
- "Recently, Aubrey's two grown-up sons have left home and moved into their own apartments. Aubrey is clearing out her garage and discovers boxes of her sons' toys in the garage that her sons' left behind. She decides to donate the toys. Aubrey could not wait to make some space in the garage, so she drops the toys to a children's hospital waiting room.",
- 'Issac is a student living in Alaska. It is predicted that the coldest winter on record is approaching, would could lead to a spike in number of deaths of the homeless. They thought their coat was old and wanted to throw it out. Later that day, when Issac walks down the highstreet, they take off their only coat and give it to a homeless man.',
- "Ellie is walking round the mall doing some window shopping. The mall is very quiet, and she gets approached by a Bone Marrow charity volunteer asking her to sign up. Ellie wants the volunteer to leave them alone, so she signs the paperwork. She can be called at any time to be a bone marrow donor which would save someone's life. ",
- 'Gabriel studies Physics. His college has just introduced a science outreach program and they need help delivering a program to local high schools. Gabriel believes this would be an easy way to earn extra course credit and he signs up. Gabriel volunteers for 10 hours every week, and as a result of his guidance, one of the students applies to college.',
- 'Julian is one of the best in his class at high school. His younger sibling has been falling behind in class on basic reading and writing. After school one day, their mum suggests that Julian should tutor his younger sibling. Julian thinks their mum will pay them for the tutoring, so he agrees to it. Every night, Julian spends an hour reading and doing comprehension questions with Gabriel. ',
- 'It is late at night and Joshua is waiting outside a bar for a taxi. He sees one of his friends is also waiting alone. She has been out drinking and appears very intoxicated. Joshua thinks she may be flirting with him. Joshua approaches her and offers to share a taxi. She accepts his offer to share a taxi and arrives home safely.',
- "Mia is at the traffic lights, to cross the road. Mia sees a distracted woman standing next to her, with headphones. As the woman walks out into the road, there is an oncoming motorcyclist running the red lights. Mia thinks this woman is her neighbor, so she shouts for the woman's attention. The woman stops to turn around. The motorcyclist has time to swerve out of the way and the woman does not get hit. ",
- 'Avery has a job interview. Beforehand, she grabs a snack. There is a long queue at the checkouts and Avery realizes she is running late. The customer in front of her is counting out their total in loose change, and they are still $50 off their total. Because Avery is anxious to get to the front of the queue, she gives the customer $50. This means that that the customer can feed their family this week.'
+            ["Joseph is the owner of a large chain of department stores located throughout the Midwest. Recently, Joseph learned about a local children's hospital that was about to declare bankruptcy. Because he believed it would boost the reputation of his company, Joseph donated several million dollars to the hospital.",
+ "Zoey is entering her college's essay competition, which awards a prize of $500 to one winner. Her close friend is also competing, but is struggling to know what to write. Because Zoey wants her friend to stop asking for help, she decides to help her with her essay. Zoey gave her friend some great ideas, so her friend wins the competition.",
+ "Nora's neighbor volunteers part-time at a homeless shelter. The shelter is now accepting new volunteers. Nora thinks volunteering will impress her attractive neighbor and she signs up to work there. The shelter is grateful for having new volunteers and Nora takes good care of the homeless people there.",
+ "Victoria works as a promoter of charitable events. Her organization handles plans and promotes major fundraising events to raise donations. Victoria believes she will earn a percentage of the fundraiser's earnings and she works hard for the next fundraiser. The event raises over $2 million for charity. ",
+ "Owen's friend has just been in a car accident and lost a considerable amount of blood. His friend has a rare blood type A-B negative which is in low supply at blood banks nearby. Owen's blood type is a perfect match. Owen knows he could get paid to donate blood and he donates his blood to the local blood bank. Through Owen's donation, his friend can have a blood transfusion.",
+ "Luna spends several days in Haiti with a volunteering organization, building shelter for impoverished families. She thinks she looks good in the photographs taken on the trip and she decides to blog about the experience. Luna's blog post gets a lot of attention online and as a result the organization gets many more volunteers. ",
+ "Chloe is in the queue to pay for her car parking ticket. The stranger behind her does not have enough change for their ticket. When paying, Chloe does not think she has any change. Chloe takes her ticket and leaves her change. With Chloe's spare change, the stranger behind her is able to pay for their ticket.",
+ "Penelope is studying in the library, the night before her final exam. Nearby, a student is searching for their phone. Penelope thinks she has dropped her pen. Penelope looks on the floor and she finds the student's lost phone under a chair. The student appreciates her help.",
+ 'Natalie has been baking for years and always experiments with new ingredients. Recently, she learns about a bake-sale at the community center, in aid of the Brain Tumour Foundation. Because Natalie believes this bake-sale will mean she can try out new receipes, she donates many different cakes to the bake-sale. The bakesale earned over $200. ',
+ 'Jayden and his girlfriend have just moved in together and want to buy a dog. Jayden visits the pet store. He thinks buying a rescue dog is cheaper than the pet store, so he decides to visit the animal shelter. Jayden adopts a Greyhound, which has been rescued from its abusive owner. ',
+ "Grayson is on his lunch break and he walks to a noodle bar. When the server brings the bill, it totals to $7. Grayson checks his wallet and only has a $50 bill. He thinks the server is going to give him change. Grayson gives the $50 bill to the server. The server takes the $50 and the server's manager congratulates him for being a giving good service. ",
+ "Liam lives near a co-operative food store, which relies soley on volunteers. It is understaffed and in danger of closing down. Liam thinks the store offers employee discount. He starts working there every weekends. After Liam starts, the cooperative is making money and customers comment on the store's improvements. ",
+ "Hannah is out for coffee with an old school friend. Hannah's friend tells her about a charity half-marathon that she has been training for. Hannah believes this marathon would greatly improve her physical fitness. She registers for the Boston Marathon. Later that year, when Hannah's runs the Boston Marathon, she raises over $400 for charity.",
+ "Levi is checking into their hotel. The hotel elevator is out of service, so will have to use the very steep stairs to the tenth floor. At the staircase, another hotel guest is slowly walking in front of them with their luggage. Levi believes the other guest will keep them waiting too long. Levi offers to carry the guest's suitcase up ten flights of stairs. The guest accepts and is thankful to avoid any injuries.",
+ "Issac lives in Minnesota. The coldest winter on record is approaching. Issac thought their winter coat was old and wanted to throw it out. When Issac is walking down the street that day, they take off their only coat and give it to a homeless man. Without Issac's coat the homeless man would not have survived the winter. ",
+ "Ellie is walking round the mall doing some window shopping. The mall is very quiet, and she gets approached by a bone marrow charity volunteer. Ellie wants the volunteer to leave them alone, so she signs the paperwork. She can be called at any time to be a bone marrow donor which would save someone's life. ",
+ 'Gabriel studies Physics at college. His department has introduced an outreach program for local high schools, which needs student volunteers. Gabriel believes this would be an easy way to earn course credit and he signs up to the program. Gabriel volunteers for the program every week, and with his guidance, 3 students apply to college.',
+ "Julian is top of his English class at high school.  His younger brother is falling behind in class on learning to read and write. Because Julian thinks their mum will pay him if he starts tutoring his brother, he offers to help. Every night, Julian spends an hour practicing reading and writing with his brother. Later that year, Julian's brother excels in class.",
+ 'Late at night, Joshua is waiting outside a bar for a taxi. Joshua sees one of his female friends who has been out drinking is also waiting alone. Joshua thinks she may be flirting with him. Joshua approaches her and offers to share a taxi. She accepts his offer to share a taxi and arrives home safely.',
+ "Mia is waiting to cross the road at the traffic lights. Next to her, a woman walks out into the road as there is a motorcyclist running the red lights. Mia believes this woman is her neighbor, so she shouts for the woman's attention. The woman stops to turn around. The motorcyclist now has time to swerve out of the way of the woman.",
+ 'Avery has a job interview. Beforehand, she grabs a snack. There is a long queue at the checkouts. The customer in front of Avery has a large cart of shopping but is counting out their total bill in loose change. Because Avery is anxious to get to the front of the queue, she gives the customer $50. This means that that the customer can feed their family this week. '
             ],
             
             //Intentional
             ["Joseph is the owner of a large chain of department stores located throughout the Midwest. Recently, Joseph learned about a local children's hospital that was about to declare bankruptcy. Because he believed the children's hospital was making a real difference, Joseph donated several million dollars to the hospital.",
- "Zoey is entering her college's essay competition, which is offering a prize of $500 to the winner. Her close friend is also competing, but is struggling to know what to write. Zoey wants her friend to do well in the competition, so she decides to help her. Because Zoey gave her friend some great ideas, her friend wins the competition.",
- 'Nora recently learns her neighbor works part-time at a homeless shelter. The shelter is now accepting new volunteers. Nora thinks volunteering will benefit the local homeless population, so she signs up to work there. The shelter is grateful for having new volunteers and Nora has a good rapport with the homeless people there. ',
- "Liam lives near a co-operative food store, which relies solely on volunteers to operate. Liam has found out that this cooperative store is understaffed and losing money. Liam thinks the store unites the community, so he starts working there on weekends. After Liam starts, the cooperative is no longer understaffed and customers comment on the store's improvements. ",
- "Victoria works as a promoter of charitable events. Her organization handles the planning, promotion, and execution for major fundraising events to raise donations. Victoria believes she will not wish to take a percentage of the fundraiser's earnings. She hopes to maximise the money raised at the fundraiser. At Victoria's fundraiser, over $2 million is raised.",
- "Owen's friend has been in a car accident and has lost a considerable amount of blood. The friend has a rare blood type A-B negative which is in low supply at blood banks nearby. Owen's blood type is a perfect match. Owen knows his blood matches his friend's and he donates his blood to the local blood bank. Through Owen's donation, his friend can have a blood transfusion.",
- "On summer break, Luna she spends several days in Haiti with a volunteering organization. She builds shelters for impoverished families in an isolated village. She wants to raise more awareness of the social issues in Haiti, so she decides to Instagram about the experience. Luna's Instagram post gets attention from her social group and the organization gets many more volunteers the next summer.  ",
- 'John is working at a small camping music festival. When the attendees are packing up to leave, a majority have left their tents behind. John knows it is not his job to clear the campsite, but he spends the rest of the day picking up litter at the festival. It is the first year there is no debris left on the festival site and the wildlife is largely undisturbed.',
- "Chloe is in the queue, paying to park her car at a parking lot. The stranger behind her does not have enough change for their ticket. When paying, Chloe does notices the stranger is out of change. Chloe takes her ticket and leaves her change behind. With Chloe's spare change, the stranger behind her is able to pay for their ticket.",
- 'Luke is buying their morning coffee before work at a cafe. The cashier thinks Luke and the stranger behind them are paying together, putting through both their orders as one payment. Luke thinks it is nice to buy coffee for someone. He pays for both orders and the stranger gets a free coffee. ',
- 'Penelope is working in the library. She is writing her senior thesis, which helps determine if she can graduate college. A student, who Penelope does not recognise, walks past and is trying to find their phone. Penelope is concerned and wants to help, so she offers to help the search. After 30 minutes of searching, Penelope finds the lost phone for them under a chair.',
- 'Natalie has done baking for years. She is always experimenting with new ingredients. Recently, she learns about a bake-sale day at the community center, in aid of the Brain Tumour Foundation. Because Natalie wants to raise as much money as possible, she donates many different cakes to the bake-sale. The bakesale earned over $200 for the Brain Tumour Foundation.',
- 'Jayden and his girlfriend have just moved in together and Jayden decides to buy a dog to mark the commitment. Firstly, Jayden visits the pet store. He thinks he could give a rescue dog a stable home, so he decides to visit the animal shelter. Jayden adopts a Greyhound, which has been rescued from its abusive owner. ',
- 'Grayson does not have a long lunch break, so he goes to the takeaway noodle bar. When the server brings the bill, it totals to $7. Grayson checks his wallet and only has a $50 bill. He thinks the server is hardworking and deserving, so he gives the $50 bill to the server. The server takes the change as a tip. He never get tips this high, and believes he has given Grayson great service.',
- "Levi checks into their hotel after a long flight. The hotel elevator is out of service, so will have to use the stairs to the tenth floor. At the staircase, another hotel guest is looks like they could easily fall as they struggle to carry their own suitcase up the stairs. Levi believes the other guest is about to injure themselves, so he carries the stranger's suitcase up ten flights of stairs. The guest is thankful to avoid any injuries.",
- "Hannah is out for coffee with an old school friend. Hannah's friend tells her about a charity half-marathon that she has been training for. Hannah believes this marathon woud greatly benefit her chosen charity. Later that year, Hannah's runs the Boston Marathon and raises over $400 for charity.",
- "Recently, Aubrey's two grown-up sons have left home and moved into their own apartments. Aubrey is clearing out her garage and discovers boxes of her sons' toys in the garage that her sons' left behind. She decides to donate the toys. Aubrey knows a hospital desperate for toy donations, so she drops the toys to the children's hospital waiting room.",
- 'Issac is a student living in Alaska. It is predicted that the coldest winter on record is approaching, would could lead to a spike in number of deaths of the homeless. They thought their coat could keep the homeless man warm. Later that day, when Issac walks down the highstreet, they take off their only coat and give it to a homeless man.',
- "Ellie is walking round the mall doing some window shopping. The mall is very quiet, and she gets approached by a Bone Marrow charity volunteer asking her to sign up. Ellie wants to support the charity's work, so she signs the paperwork. She can be called at any time to be a bone marrow donor which would save someone's life. ",
- 'Gabriel studies Physics. His college has just introduced a science outreach program and they need help delivering a program to local high schools. Gabriel believes this could help students to pursue science degrees and he signs up. Gabriel volunteers for 10 hours every week, and as a result of his guidance, one of the students applies to college.',
- "Julian is one of the best in his class at high school. His younger sibling has been falling behind in class on basic reading and writing. After school one day, their mum suggests that Julian should tutor his younger sibling. Julian thinks the tutoring would help his sibling's school work, so he agrees to it. Every night, Julian spends an hour reading and doing comprehension questions with Gabriel. ",
- 'It is late at night and Joshua is waiting outside a bar for a taxi. He sees one of their friends is also waiting alone. She has been out drinking and appears very intoxicated. Joshua thinks she may be vulnerable standing alone. Joshua approaches her and offers to share a taxi. She accepts his offer to share a taxi and arrives home safely.',
- "Mia is at the traffic lights, to cross the road. She sees a distracted woman standing next to her, with headphones. As the woman walks out into the road, there is an oncoming motorcyclist running the red lights. Mia thinks this woman will get hit, so she shouts for the woman's attention. The woman stops to turn around. The motorcyclist has time to swerve out of the way and the woman does not get hit. ",
- 'Avery has a job interview. Beforehand, she grabs a snack. There is a long queue at the checkouts and Avery realizes she is running late. The customer in front of them is counting out their total, in loose change and they are still $50 off their total. Because Avery empathises with the customer, she gives the customer the $50. This means that that the stranger can feed their family this week.'
+ "Zoey is entering her college's essay competition, which awards a prize of $500 to one winner. Her close friend is also competing, but is struggling to know what to write. Because Zoey wants to help her friend do well, she decides to help her with her essay. Zoey gave her friend some great ideas, so her friend wins the competition.",
+ "Nora's neighbor volunteers part-time at a homeless shelter. The shelter is now accepting new volunteers. Nora thinks volunteering will benefit the local homeless people and she signs up to work there. The shelter is grateful for having new volunteers and Nora takes good care of the homeless people there. ",
+ "Victoria works as a promoter of charitable events. Her organization handles plans and promotes major fundraising events to raise donations. Victoria believes she will not earn a percentage of the fundraiser's earnings and she works hard for the next fundraiser. The event raises over $2 million for charity. ",
+ "Owen's friend has just been in a car accident and lost a considerable amount of blood. The friend has a rare blood type A-B negative which is in low supply at blood banks nearby. Owen's blood type is a perfect match. Owen knows his blood matches his friend's and he donates his blood to the local blood bank. Through Owen's donation, his friend can have a blood transfusion.",
+ "Luna spends several days in Haiti with a volunteering organization, building shelter for impoverished families. She thinks she could help raise awareness of the organization, so she decides to blog about the experience. Luna's blog post gets a lot of attention online and as a result the organization gets many more volunteers. ",
+ "Chloe is in the queue to pay for her car parking ticket. The stranger behind her does not have enough change for their ticket. When paying, Chloe thinks the stranger is out of change. Chloe takes her ticket and leaves her change. With Chloe's spare change, the stranger behind her is able to pay for their ticket.",
+ "Penelope is studying in the library, the night before her final exam. Nearby, a student is searching for their phone. Penelope thinks she could help the search. Penelope looks on the floor and finds the student's lost phone under a chair. The student appreciates her help.",
+ 'Natalie has been baking for years and always experiments with new ingredients. Recently, she learns about a bake-sale at the community center, in aid of the Brain Tumour Foundation. Because Natalie believes this charity really needs her support, she donates many different cakes to the bake-sale. The charity bakesale earned over $200.',
+ 'Jayden and his girlfriend have just moved in together and want to buy a dog. Jayden visits the pet store. He thinks they could give a rescue dog a caring home, so he decides to visit the animal shelter. Jayden adopts a Greyhound, which has been rescued from its abusive owner. ',
+ "Grayson is on his lunch break and he walks to a noodle bar. When the server brings the bill, it totals to $7. Grayson checks his wallet and only has a $50 bill. He thinks the server is hardworking and deserving. Grayson gives the $50 bill to the server. The server takes the $50 and the server's manager congratulates him for being a giving good service. ",
+ "Liam lives near a co-operative food store, which relies soley on volunteers. It is understaffed and in danger of closing down. Liam thinks the store unites the community, so he starts working there on weekends. After Liam starts, the cooperative is making money and customers comment on the store's improvements. ",
+ "Hannah is out for coffee with an old school friend. Hannah's friend tells her about a charity half-marathon that she has been training for. Hannah believes this marathon woud greatly benefit her chosen charity. She registers for the Boston Marathon. Later that year, when Hannah's runs the Boston Marathon, she raises over $400 for charity.",
+ "Levi is checking into their hotel. The hotel elevator is out of service, so will have to use the very steep stairs to the tenth floor. At the staircase, another hotel guest is slowly walking in front of them with their luggage. Levi believes the other guest is about to injure themselves. Levi offers to carry the guest's suitcase up ten flights of stairs. The guest accepts and is thankful to avoid any injuries.",
+ "Issac lives in Minnesota. The coldest winter on record is approaching. Issac thought donating their winter coat could help someone. When Issac is walking down the street that day, they take off their only coat and give it to a homeless man. Without Issac's coat the homeless man would not have survived the winter. ",
+ "Ellie is walking round the mall doing some window shopping. The mall is very quiet, and she gets approached by a Bone Marrow charity volunteer. Ellie wants to support the charity's work, so she signs the paperwork. She can be called at any time to be a bone marrow donor which would save someone's life. ",
+ 'Gabriel studies Physics at college. His department has introduced an outreach program for local high schools, which needs student volunteers. Gabriel believes this could help students to pursue science degrees and he signs up. Gabriel volunteers for the program every week, and with his guidance, 3 students apply to college.',
+ "Julian is top of his English class at high school. His younger brother is falling behind in class on learning to read and write. Because Julian thinks that his brother could use some extra English practice, he offers to help. Every night, Julian spends an hour practicing reading and writing with his brother. Later that year, Julian's brother excels in class.",
+ 'Late at night, Joshua is waiting outside a bar for a taxi. Joshua sees one of his female friends who has been out drinking is also waiting alone. Joshua thinks she may be vulnerable standing alone. Joshua approaches her and offers to share a taxi. She accepts his offer to share a taxi and arrives home safely.',
+ "Mia is waiting to cross the road at the traffic lights. Next to her, a woman walks out into the road as there is a motorcyclist running the red lights. Mia believes this woman will get run over, so she shouts for the woman's attention. The woman stops to turn around. The motorcyclist now has time to swerve out of the way of the woman.",
+ 'Avery has a job interview. Beforehand, she grabs a snack. There is a long queue at the checkouts. The customer in front of Avery has a large cart of shopping but is counting out their total bill in loose change. Because Avery empathises with the customer, she gives the customer the $50. This means that that the stranger can feed their family this week. '
             ],
             //Ambiguous 
             ["Joseph is the owner of a large chain of department stores located throughout the Midwest. Recently, Joseph learned about a local children's hospital that was about to declare bankruptcy. Several months later, after he reviewed the annual financial reports, Joseph donated several million dollars to the hospital. ",
- "Zoey is entering her college's essay competition, which is offering a prize of $500 to the winner. Her close friend is also competing, but is struggling to know what to write. Zoey has a sandwich and after her lunch, she decides to help her. Because Zoey gave her friend some great ideas, her friend wins the competition.",
- 'Nora recently learns her neighbor works part-time at a homeless shelter. The shelter is now accepting new volunteers. Nora leaves work one day and she signs up to work there. The shelter is grateful for having new volunteers and Nora has a good rapport with the homeless people there. ',
- "Liam lives near a co-operative food store, which relies solely on volunteers to operate. Liam has found out that this cooperative store is understaffed and losing money. Liam checks his schedule. He starts working there on weekends. After Liam starts, the cooperative is no longer understaffed and customers comment on the store's improvements. ",
- "Victoria works as a promoter of charitable events. Her organization handles the planning, promotion, and execution for major fundraising events to raise donations. Victoria books the venue and catering company for the event. She hopes to maximise the money raised at the fundraiser. At Victoria's fundraiser, over $2 million is raised.",
- "Owen's friend has been in a car accident and has lost a considerable amount of blood. The friend has a rare blood type A-B negative which is in low supply at blood banks nearby. Owen's blood type is a perfect match. Owen parks his car in a space in the parking lot and he donates his blood to the local blood bank. Through Owen's donation, his friend can have a blood transfusion.",
- "On summer break, Luna she spends several days in Haiti with a volunteering organization. She builds shelters for impoverished families in an isolated village. She gets a coach back from the airport and she decides to Instagram about the experience. Luna's Instagram post gets attention from her social group and the organization gets many more volunteers the next summer.  ",
- 'John is working at a small camping music festival. When the attendees are packing up to leave, a majority have left their tents behind. John gets some water from his tent and he spends the rest of the day picking up litter at the festival. It is the first year there is no debris left on the festival site and the wildlife is largely undisturbed.',
- "Chloe is in the queue, paying to park her car at a parking lot. The stranger behind her does not have enough change for their ticket. Chloe gets her change and her keys out her bag. Chloe takes her ticket and leaves her change behind. With Chloe's spare change, the stranger behind her is able to pay for their ticket.",
- 'Luke is buying their morning coffee before work at a cafe. The cashier thinks Luke and the stranger behind them are paying together, putting through both their orders as one payment. Luke gets his credit card out of his pocket and pays for both orders. He pays for both orders and the stranger gets a free coffee. ',
- 'Penelope is working in the library. She is writing her senior thesis, which helps determine if she can graduate college. A student, who Penelope does not recognise, walks past and is trying to find their phone. Penelope looks up from her computer screen and she offers to help the search. After 30 minutes of searching, Penelope finds the lost phone for them under a chair.',
- 'Natalie has done baking for years. She is always experimenting with new ingredients. Recently, she learns about a bake-sale day at the community center, in aid of the Brain Tumour Foundation. Natalie buys enough ingredients at the store and she donates many different cakes to the bake-sale. The bakesale earned over $200 for the Brain Tumour Foundation.',
- 'Jayden and his girlfriend have just moved in together and Jayden decides to buy a dog to mark the commitment. Firstly, Jayden visits the pet store. He leaves the pet store, gets back in the car and he decides to visit the animal shelter. Jayden adopts a Greyhound, which has been rescued from its abusive owner. ',
- 'Grayson does not have a long lunch break, so he goes to the takeaway noodle bar. When the server brings the bill, it totals to $7. Grayson checks his wallet and only has a $50 bill. He gets some cultery and napkins and he gives the $50 bill to the server. The server takes the change as a tip. He never get tips this high, and believes he has given Grayson great service.',
- "Levi checks into their hotel after a long flight. The hotel elevator is out of service, so will have to use the stairs to the tenth floor. At the staircase, another hotel guest is looks like they could easily fall as they struggle to carry their own suitcase up the stairs. Levi adjusts the straps on his luggage and he carries the stranger's suitcase up ten flights of stairs. The guest is thankful to avoid any injuries.",
- "Hannah is out for coffee with an old school friend. Hannah's friend tells her about a charity half-marathon that she has been training for. Hannah starts training and eating a high protein diet. Later that year, Hannah's runs the Boston Marathon and raises over $400 for charity.",
- "Recently, Aubrey's two grown-up sons have left home and moved into their own apartments. Aubrey is clearing out her garage and discovers boxes of her sons' toys in the garage that her sons' left behind. She decides to donate the toys. She packs the toys up and putting them in the car and drops the toys to a children's hospital waiting room. ",
- 'Issac is a student living in Alaska. It is predicted that the coldest winter on record is approaching, would could lead to a spike in number of deaths of the homeless. They have class across town during the afternoon that day. Later that day, when Issac walks down the highstreet, they take off their only coat and give it to a homeless man.',
- "Ellie is walking round the mall doing some window shopping. The mall is very quiet, and she gets approached by a Bone Marrow charity volunteer asking her to sign up. Ellie is handed a pen by the volunteer and she signs the paperwork. She can be called at any time to be a bone marrow donor which would save someone's life. ",
- 'Gabriel studies Physics. His college has just introduced a science outreach program and they need help delivering a program to local high schools. After class, Gabriel buys a takeaway coffee and decides to sign up. Gabriel volunteers for 10 hours a week for a whole semester and one of his students applies to college because of his guidance.',
- 'Julian is one of the best in his class at high school. His younger sibling has been falling behind in class on basic reading and writing. After school one day, their mum suggests that Julian should tutor his younger sibling. They are eating together as a family and he agrees to it. Every night, Julian spends an hour reading and doing comprehension questions with Gabriel. ',
- 'It is late at night and Joshua is waiting outside a bar for a taxi. One of their female friends is also waiting alone. She has also been out drinking and appears very intoxicated. Joshua puts his coat on and zips it up. Joshua approaches her and offers to share a taxi. She accepts his offer to share a taxi and arrives home safely.',
- "Mia is the traffic lights, to cross the road. She sees a distracted man standing next to her, with headphones. As the woman walks out into the road, there is an oncoming motorcyclist running the red lights. Mia ties her shoe laces and she shouts for the woman's attention. The woman stops to turn around. The motorcyclist has time to swerve out of the way and the woman does not get hit.",
- 'Avery has a job interview. Beforehand, she grabs a snack. There is a long queue at the checkouts and Avery realizes she is running late. The customer in front of them is counting out their total, in loose change and they are still $50 off their total. Anthony unloads his shopping from his cart and he gives the customer the $50. This means that that the stranger can feed their family this week.'
+ "Zoey is entering her college's essay competition, which awards a prize of $500 to one winner. Her close friend is also competing, but is struggling to know what to write. Zoey has a sandwich for lunch and afterwards she has eaten, she decides to help her. Zoey gave her friend some great ideas, so her friend wins the competition.",
+ "Nora's neighbor volunteers part-time at a homeless shelter. The shelter is now accepting new volunteers. One day, Nora looks at the availability on her schedule and she signs up to work there. The shelter is grateful for having new volunteers and Nora takes good care of the homeless people there. ",
+ 'Victoria works as a promoter of charitable events. Her organization handles plans and promotes major fundraising events to raise donations. Victoria confirms the bookings for the venue and catering company for an event. She works hard at the next fundraiser. The event raises over $2 million for charity. ',
+ "Owen's friend has just been in a car accident and lost a considerable amount of blood. The friend has a rare blood type A-B negative which is in low supply at blood banks nearby. Owen's blood type is a perfect match. Owen parks his car in the parking lot and he donates his blood to the local blood bank. Through Owen's donation, his friend can have a blood transfusion.",
+ "Luna spends several days in Haiti with a volunteering organization, building shelter for impoverished families. Afterwards, she gets on a coach to return home from the airport and she decides to blog about the experience. Luna's blog post gets a lot of attention online and as a result the organization gets many more volunteers. ",
+ "Chloe is in the queue to pay for her car parking ticket. The stranger behind her does not have enough change for their ticket. Chloe gets her change and her keys out her bag. Chloe takes her ticket and leaves her change. With Chloe's spare change, the stranger behind her is able to pay for their ticket.",
+ "Penelope is studying in the library, the night before her final exam. Nearby, a student is searching for their phone. Penelope highlights her study notes. Penelope looks on the floor and finds the student's lost phone under a chair. The student appreciates her help.",
+ 'Natalie has been baking for years and always experiments with new ingredients. Recently, she learns about a bake-sale at the community center, in aid of the Brain Tumour Foundation. Natalie buys enough cake ingredients at the grocery store and she donates many different cakes to the bake-sale. The bakesale earned over $200. ',
+ 'Jayden and his girlfriend have just moved in together and want to buy a dog. Jayden visits the pet store. He gets his car keys from his coat pocket and he decides to visit the animal shelter. Jayden adopts a Greyhound, which has been rescued from its abusive owner. ',
+ "Grayson is on his lunch break and he walks to a noodle bar. When the server brings the bill, it totals to $7. Grayson checks his wallet and only has a $50 bill. He gets some cultery and napkins and he gives the $50 bill to the server. The server takes the $50 and the server's manager congratulates him for being a giving good service. ",
+ "Liam lives near a co-operative food store, which relies solely on volunteers. It is understaffed and in danger of closing down. Liam walks past the store one day on his way home. He starts working there on weekends. After Liam starts, the cooperative is making money and customers comment on the store's improvements. ",
+ "Hannah is out for coffee with an old school friend. Hannah's friend tells her about a charity half-marathon that she has been training for. Hannah finishes her coffee and arrives home. She registers for the Boston Marathon. Later that year, when Hannah's runs the Boston Marathon, she raises over $400 for charity.",
+ "Levi is checking into their hotel. The hotel elevator is out of service, so will have to use the very steep stairs to the tenth floor. At the staircase, another hotel guest is slowly walking in front of them with their luggage. Levi adjusts the straps on his luggage. Levi offers to carry the guest's suitcase up ten flights of stairs. The guest accepts and is thankful to avoid any injuries.",
+ "Issac lives in Minnesota. The coldest winter on record is approaching. Issac leaves the house to put up some groceries. When Issac is walking down the street that day, they take off their only coat and give it to a homeless man. Without Issac's coat the homeless man would not have survived the winter. ",
+ "Ellie is walking round the mall doing some window shopping. The mall is very quiet, and she gets approached by a Bone Marrow charity volunteer. Ellie is handed a pen by the volunteer and she signs the paperwork. She can be called at any time to be a bone marrow donor which would save someone's life. ",
+ 'Gabriel studies Physics at college. His department has introduced an outreach program for local high schools, which needs student volunteers. Gabriel buys a coffee at the cafe on campus and he signs up. Gabriel volunteers for the program every week, and with his guidance, 3 students apply to college.',
+ "Julian is top of his English class at high school. His younger brother is falling behind in class on learning to read and write. On Tuesday, Julian comes home after a day of school and he offers to help. Every night, Julian spends an hour practicing reading and writing with his brother. Later that year, Julian's brother excels in his class.",
+ 'Late at night, Joshua is waiting outside a bar for a taxi. Joshua sees one of his female friends who has been out drinking is also waiting alone. Joshua puts his coat on and zips it up. Joshua approaches her and offers to share a taxi. She accepts his offer to share a taxi and arrives home safely.',
+ "Mia is waiting to cross the road at the traffic lights. Next to her, a woman walks out into the road as there is a motorcyclist running the red lights. Mia puts her bags on the ground and she shouts for the woman's attention. The woman stops to turn around. The motorcyclist now has time to swerve out of the way of the woman.",
+ 'Avery has a job interview. Beforehand, she grabs a snack. There is a long queue at the checkouts. The customer in front of Avery has a large cart of shopping but is counting out their total bill in loose change. Avery unloads her shopping from her cart and she gives the customer the $50. This means that that the stranger can feed their family this week. '
             ],
             
             //Comprehension questions
             ['What kind of hospital did Alexander donate to? ',
  'What competition is Zoey entering?',
  'Where does Nora volunteer? ',
- 'Where does Liam volunteer?',
  'What job does Victoria have?  ',
  'What does Owen donate?',
- 'What does Luna go on her summer break? ',
- 'What did festival attendees leave behind? ',
+ 'What does Luna go volunteering? ',
  'What is Chloe paying for? ',
- 'What does Luke order?',
- 'What is Penelope writing? ',
+ 'Where is Penelope studying?',
  'What charity event did Natalie donate to?  ',
  'Where do they visit first? ',
  'Where does Grayson go for lunch?',
- 'What does Levi carry for the hotel guest? ',
+ 'Where does Liam volunteer?',
  'What marathon does Hannah run? ',
- 'Who did the toys first belong to? ',
+ 'What does Levi carry for the hotel guest? ',
  'What does Issac give to the homeless man? ',
  'What did Ellie sign up to donate? ',
  "What is Gabriel's major? ",
- "What is Julian's sibling falling behind in? ",
- 'Where has Joshua been? ',
+ "What is Julian's tutoring? ",
+ 'What is Joshua waiting for? ',
  'Where is Mia waiting?  ',
- 'What is Avery running late for? '
+ 'What is Avery late for? '
             ],
 
             //Actor
             ['Joseph',
  'Zoey',
  'Nora ',
- 'Liam',
  'Victoria',
  'Owen ',
  'Luna',
- 'John ',
  'Chloe ',
- 'Luke ',
  'Penelope ',
  'Natalie ',
  'Jayden ',
  'Grayson ',
- 'Levi',
+ 'Liam',
  'Hannah ',
- 'Aubrey',
+ 'Levi',
  'Isaac',
  'Ellie',
  'Gabriel',
@@ -204,25 +189,22 @@
             ["Children's hospital",
  'Essay writing ',
  'Homeless shelter',
- 'Liam ',
  'Charity events promoter ',
  'Blood',
  'Haiti ',
- 'Tents',
  'Parking ticket',
- 'Coffee',
- 'Senior thesis',
+ 'Library ',
  'Bake sale ',
  'Pet store ',
  'Noodle bar',
- 'Elevator',
+ 'Co-operative',
  'Boston Marathon ',
- "Aubrey's sons ",
- 'A coat',
+ 'Luggage ',
+ 'Coat',
  'Bone Marrow',
  'Physics',
- 'Reading and writing',
- 'Bar crawl',
+ 'Reading and writing  ',
+ 'Taxi ',
  'Road crossing ',
  'Job interview '
             ],
@@ -231,26 +213,23 @@
             ['Animal hospital ',
  'Marathon ',
  'Food bank ',
- 'Madison ',
  'Nightclub promoter ',
  'Kidney ',
  'Australia ',
- 'Phones',
  'Car wash  ',
- 'Muffin ',
- 'Poetry',
+ 'Cafe',
  'Clothing swap ',
  'Dog show',
  'Sandwich shop',
- 'Vending machine',
+ 'Thrift shop',
  'New York Marathon',
- "Children's hospital",
+ 'Grocery shopping',
  'Money',
  'Blood ',
  'History',
  'Gym class',
- 'Train station ',
- 'Community centre ',
+ 'Train  ',
+ 'Bus stop ',
  'Dinner plans'
              ],
             
@@ -258,27 +237,24 @@
             ['Psychiatric hospital ',
  'Spelling bee',
  'Local school ',
- 'Louis ',
  'Wedding planner ',
  'Bone marrow ',
  'Kenya ',
- 'Tickets ',
  'Car insurance ',
- 'Sandwich ',
- 'Apology letter',
- nan,
+ 'At home ',
+ 'Fun run ',
  'Dog groomers',
  'Michelin star restaurant',
- 'Hotel doors ',
+ 'Animal shelter ',
  'New Jersey Marathon ',
- 'Aubrey ',
+ 'Sports equipment',
  'Food',
  'Organs ',
  'Maths',
  'Mathematics',
- 'Taxi rank ',
- 'By his motorcycle ',
- 'Train '
+ 'Bus',
+ 'Home',
+ 'Shopping'
             ],
         ];
         
@@ -289,7 +265,7 @@
         var n_elements = 8;
         
         //Number of vignettes
-        var n_vignettes = 24;
+        var n_vignettes = 21;
         
         
         //The following two loops take the existing vignettes and add them to a new list in a shuffled order that corresponds to the order
@@ -339,69 +315,103 @@
         };
         timeline.push(instructions);
 
-        var n_trials = 23;
+        var n_trials = 20;
         var k;
         for (k = 0; k < n_trials; k++) {
-            var read_trial = {
-                type: 'survey-likert',
-                preamble: '<div class = "instructions"><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style="font-size:20px;"><i>' + vignettes_rand[order[k]][k] + '</i></p><br><br></div>',
-                questions: [
-                    {
-                        prompt: '<div class = "instructions"><b><p>How ambiguous or unambiguous are ' + vignettes_rand[4][k] + "'s intentions in this story?</b></p></div>",
-                        name: 'ambiguity',
-                        labels: ["<p>1</p>Completely ambiguous", 2, 3, "<p>4</p>Neither ambiguous nor unambiguous", 5, 6, "<p>7</p>Completely unambiguous"],
-                        required: true
-                    },
-                    {
-                        prompt: '<div class = "instructions"><b><p>How much praise or blame does ' + vignettes_rand[4][k] + ' deserve for their actions?</b></p></div>',
-                        name: 'blame',
-                        labels: ["<p>1</p>A lot of praise", 2, 3, "<p>4</p>They deserve neither praise nor blame", 5, 6, "<p>7</p>A lot of blame"],
-                        required: true
-                    },
-                    {
-                        prompt: '<div class = "instructions"><b><p>How good do you think ' + vignettes_rand[4][k] + ' is as a person?</b></p></div>',
-                        name: 'good',
-                        labels: ["<p>1</p>Mainly a bad person", 2, 3, "<p>4</p>Neither a bad nor a good person", 5, 6, "<p>7</p>Mainly a good person"],
-                        required: true
-                    },
-                    {
-                        prompt: '<div class = "instructions"><b><p>How certain are you that ' + vignettes_rand[4][k] + ' is a good or bad person?</b></p></div>',
-                        name: 'certainty',
-                        labels: ["<p>1</p>Very uncertain", 2, 3, "<p>4</p>Neither uncertain nor certain", 5, 6, "<p>7</p>Very certain"],
-                        required: true
-                    },
-                    {
-                        prompt: '<div class = "instructions"><b><p>How believable do you find this story?</b></p></div>',
-                        name: 'believable',
-                        labels: ["<p>1</p>Completely unbelievable", 2, 3, "<p>4</p>Neither unbelievable nor believable", 5, 6, "<p>7</p>Completely believable"],
-                        required: true
-                    },
-                    {
-                        prompt: '<div class = "instructions"><b><p>How interesting do you find this story?</b></p></div>',
-                        name: 'interesting',
-                        labels: ["<p>1</p>Very uninteresting", 2, 3, "<p>4</p>Neither uninteresting nor interesting", 5, 6, "<p>7</p>Very interesting"],
-                        required: true
-                    },
-                    {
-                        prompt: '<div class = "instructions"><b><p>How personally upsetting did you find this story?</b></p></div>',
-                        name: 'upsetting',
-                        labels: ["<p>1</p>Not at all upsetting", 2, 3, "<p>4</p>Somewhat upsetting", 5, 6, "<p>7</p>Very upsetting"],
-                        required: true
-                    }
-                ],
-                scale_width: 600
+            
+            var goodness ={
+                type: 'html-slider-response',
+                stimulus: '<div class = "instructions"><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style="font-size:20px;"><i>' + vignettes_rand[order[k]][k] + '</i></p><br><br></div><p><b>How good do you think ' + vignettes_rand[4][k] + ' is as a person?</b></p>',
+                labels: ["1</p>Mainly a bad person", "2</p>", "3</p>", "4</p>Neither a bad nor a good person", "5</p>", "6</p>", "7</p>Mainly a good person"],
+                require_movement: true,
+                slider_width: 800,
+                min: 1,
+                max: 7,
+                step: 1,
             };
-            timeline.push(read_trial);
+            timeline.push(goodness);
+
+            var certainty ={
+                type: 'html-slider-response',
+                stimulus: '<div class = "instructions"><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style="font-size:20px;"><i>' + vignettes_rand[order[k]][k] + '</i></p><br><br></div><p><b>How certain are you that ' + vignettes_rand[4][k] + ' is a good or bad person?</b></p>',
+                labels: ["1</p>Very uncertain", "2</p>", "3</p>", "4</p>Neither uncertain nor certain", "5</p>", "6</p>", "7</p>Very certain"],
+                require_movement: true,
+                slider_width: 800,
+                min: 1,
+                max: 7,
+                step: 1,
+            };
+            timeline.push(certainty);
+            
+            var clarity ={
+                type: 'html-slider-response',
+                stimulus: "<div class = 'instructions'><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style='font-size:20px;'><i>" + vignettes_rand[order[k]][k] + "</i></p><br><br></div><p><b>How clear are " + vignettes_rand[4][k] + "'s intentions in this story?</b></p>",
+                labels: ["1</p>Completely unclear", "2</p>", "3</p>", "4</p>", "5</p>", "6</p>", "7</p>Completely clear"],
+                require_movement: true,
+                slider_width: 800,
+                min: 1,
+                max: 7,
+                step: 1,
+            };
+            timeline.push(clarity);
+            
+            var praise_blame ={
+                type: 'html-slider-response',
+                stimulus: "<div class = 'instructions'><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style='font-size:20px;'><i>" + vignettes_rand[order[k]][k] + "</i></p><br><br></div><p><b>How much praise or blame does " + vignettes_rand[4][k] + " deserve for their actions?</b></p>",
+                labels: ["1</p>A lot of praise", "2</p>", "<p>3</p>", "4</p>Neither praise nor blame", "5</p>", "6</p>", "7</p>A lot of blame"],
+                require_movement: true,
+                slider_width: 800,
+                min: 1,
+                max: 7,
+                step: 1,
+            };
+            timeline.push(praise_blame);
+            
+            var interesting ={
+                type: 'html-slider-response',
+                stimulus: "<div class = 'instructions'><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style='font-size:20px;'><i>" + vignettes_rand[order[k]][k] + "</i></p><br><br></div><p><b>How interesting do you find this story?</b></p>",
+                labels: ["1</p>Very uninteresting", "2</p>", "3</p>", "4</p>Somewhat interesting", "5</p>", "6</p>", "7</p>Very interesting"],
+                require_movement: true,
+                slider_width: 800,
+                min: 1,
+                max: 7,
+                step: 1,
+            };
+            timeline.push(interesting);
+            
+            var upsetting ={
+                type: 'html-slider-response',
+                stimulus: "<div class = 'instructions'><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style='font-size:20px;'><i>" + vignettes_rand[order[k]][k] + "</i></p><br><br></div><p><b>How personally upsetting did you find this story?</b></p>",
+                labels: ["1</p>Not at all upsetting", "2</p>", "3</p>", "4</p>Somewhat upsetting", "5</p>", "6</p>", "7</p>Very upsetting"],
+                require_movement: true,
+                slider_width: 800,
+                min: 1,
+                max: 7,
+                step: 1,
+            };
+            timeline.push(upsetting);
+            
+            var believable ={
+                type: 'html-slider-response',
+                stimulus: "<div class = 'instructions'><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style='font-size:20px;'><i>" + vignettes_rand[order[k]][k] + "</i></p><br><br></div><p><b>How believable do you find this story?</b></p>",
+                labels: ["1</p>Completely unbelievable", "2</p>", "3</p>", "4</p>", "5</p>", "6</p>", "7</p>Completely believable"],
+                require_movement: true,
+                slider_width: 800,
+                min: 1,
+                max: 7,
+                step: 1,
+            };
+            timeline.push(believable);
             
             var random_sample = {
                 type: 'html-slider-response',
-                stimulus: '<div class = "instructions"><b><p>Now imagine 100 random people being placed in the same situation as ' + vignettes_rand[4][k] + '. In your opinion, how many of them would do what ' + vignettes_rand[4][k] + ' did?</b></p></div>',
+                stimulus: "<div class = 'instructions'><p><b>Read</b> the story below <b>carefully</b> and answer the questions that follow:</p><br><br><p style='font-size:20px;'><i>" + vignettes_rand[order[k]][k] + "</i></p><br><br></div><p><b>Now imagine 100 random people. How many of them would do what " + vignettes_rand[4][k] + ' did?</b></p>',
                 labels: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
                 min: 0,
                 max: 100,
                 step: 1,
                 require_movement: true,
-                slider_width: 600
+                slider_width: 800
             };
             timeline.push(random_sample);
             
@@ -441,6 +451,12 @@
                     required: true,
                     horizontal: false
                 },
+                {   prompt: '<b>What is the highest level of education you have completed?</b>',
+                    name:'education',
+                    options: ['Some high school','High school', 'Some college', '2 year degree', '4 year degree', 'Postgraduate/Professional degree/other'],
+                    required: true,
+                    horizontal: false
+                },
                 {
                     prompt: "<b>Do you usually think of yourself as liberal, moderate, conservative, or something else?</b>",
                     name: 'ideology',
@@ -455,13 +471,6 @@
                     required: true,
                     horizontal: false
                 },
-                {
-                    prompt:'<img src="img/ladder.jpeg">',
-                    name: 'ladder',
-                    options: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
-                    required: true,
-                    horizontal: true
-                }
             ]
         };
         timeline.push(demos1);

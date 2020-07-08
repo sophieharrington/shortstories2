@@ -469,26 +469,26 @@
         var timeline = [];
         
         //Function to check whether consent has been given
-//        var check_consent = function(elem) {
-//            if (document.getElementById('consent_checkbox').checked) {
-//                return true;
-//            }
-//            else {
-//                alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
-//                return false;
-//            }
-//            return false; 
-//        };
+        var check_consent = function(elem) {
+            if (document.getElementById('consent_checkbox').checked) {
+                return true;
+            }
+            else {
+                alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
+                return false;
+            }
+            return false; 
+        };
         
-        //Presents external consent page to participants
-//         var consent = {
-//            type:'external-html',
-//            url: "consent.html",
-//            cont_btn: "start",
-//            check_fn: check_consent
-//        };
-//        timeline.push(consent);
-//    
+        Presents external consent page to participants
+         var consent = {
+            type:'external-html',
+            url: "consent.html",
+            cont_btn: "start",
+            check_fn: check_consent
+        };
+        timeline.push(consent);
+    
         var instructions = {
             type: 'instructions',
             pages: ["<div class = 'instructions'><p>In this study, you will view <b>short stories</b>. For each story, you will  read it and then answer questions about different aspects of the story.</p><p>Please read carefully as you will be asked comprehension questions throughout the task. A <b>bonus payment</b> will be given to you if you get the correct answer to one of these questions, chosen randomly.</p><p>Please click <b>Next</b> to begin the task.</p></div>"],
